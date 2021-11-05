@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const db = require('../models');
+const db = require('../models/workout');
 
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/deep-thoughts',
