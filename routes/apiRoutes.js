@@ -51,8 +51,7 @@ router.get("/api/workouts/range", async (req, res) => {
 
 router.post("/api/workouts", async (req, res) => {
     try {
-      console.log(body);
-        const newExercise = await Workout.create(body);
+        const newExercise = await Workout.create(req.body);
         res.status(200).json(newExercise);
     } catch (error) {
         res.status(400).json(error);
